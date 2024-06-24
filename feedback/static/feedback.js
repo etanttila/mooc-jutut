@@ -459,6 +459,25 @@ async function studentDiscussionPreview(btn) {
 }
 
 
+async function pointsDisplay(btn) {
+  const url = btn.dataset['url'];
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Unable to open URL");
+    }
+    const bodyText = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(bodyText, "text/html");
+    const contentDiv = doc.querySelector('div')
+    return contentDiv;
+  } catch (error) {
+    console.error("Error:", error);
+    return '<div class="points-display">' + btn.dataset['error'] + '</div>';
+  }
+}
+
+
 $(function() {
   $('[data-toggle="popover"]').popover();
 
@@ -473,6 +492,20 @@ $(function() {
           content: newContent,
           html: true,
         }).popover('show');
+      });
+  });
+
+  /* Replace default popover with points summary */
+  $('.display-points-btn').one('show.bs.popover', function(e) {
+    const btn = e.target
+    $(btn).popover('destroy');
+    pointsDisplay(btn)
+      .then(function(newContent) {
+        $(btn).popover({
+          content: newContent,
+          html: true,
+        }).popover('show');
+        $('.points-display [data-toggle="tooltip"]').tooltip();
       });
   });
 });

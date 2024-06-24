@@ -437,6 +437,41 @@ msgstr "Näytä palautus A+:ssa"
 msgid "Filter options (%(number)s active)"
 msgstr "Rajausvalinnat (%(number)s aktiivista)"
 
+#: feedback/templates/manage/_points.html
+msgid "Total"
+msgstr "Kokonaispisteet"
+
+#: feedback/templates/manage/_points.html
+#, python-format
+msgid "Points in category '%(category_name)s'"
+msgstr "'%(category_name)s'-kategorian pisteet"
+
+#: feedback/templates/manage/_points.html
+msgid "Points from module"
+msgstr "Pisteet moduulista"
+
+#: feedback/templates/manage/_points.html
+#: feedback/templates/manage/_progress_bar.html
+msgid "Points to pass"
+msgstr "Läpäisyyn vaadittavat pisteet"
+
+#: feedback/templates/manage/_points.html
+msgid "The student has not passed the module."
+msgstr "Opiskelija ei ole läpäissyt moduulia."
+
+#: feedback/templates/manage/_points.html
+msgid "Points from chapter"
+msgstr "Pisteet luvusta"
+
+#: feedback/templates/manage/_points.html
+msgid "The student has not passed all of the exercises in the chapter."
+msgstr "Opiskelija ei ole läpäissyt kaikkia luvun tehtäviä."
+
+#: feedback/templates/manage/_progress_bar.html
+#: feedback/templates/manage/_submitter_heading.html
+msgid "Points"
+msgstr "Pisteet"
+
 #: feedback/templates/manage/_response_message.html
 msgid "Update"
 msgstr "Päivitä"
@@ -476,7 +511,7 @@ msgstr "Näytä kaikki palautteet tältä opiskelijalta"
 #: feedback/templates/manage/_submitter_heading.html
 #, python-format
 msgid "Conversations with %(name)s"
-msgstr "Keskustelut käyttäjän %(name)s kanssa"
+msgstr "Keskustelut opiskelijan %(name)s kanssa"
 
 #: feedback/templates/manage/_submitter_heading.html
 msgid "Unable to preview conversations."
@@ -495,12 +530,17 @@ msgid "Background"
 msgstr "Taustatieto"
 
 #: feedback/templates/manage/_submitter_heading.html
-msgid "Show the student's points"
-msgstr "Näytä opiskelijan pisteet"
+#, python-format
+msgid "Points for %(name)s"
+msgstr "Opiskelijan %(name)s pisteet"
 
 #: feedback/templates/manage/_submitter_heading.html
-msgid "Points"
-msgstr "Pisteet"
+msgid "Unable to fetch points."
+msgstr "Pisteiden hakeminen ei onnistunut."
+
+#: feedback/templates/manage/_submitter_heading.html
+msgid "Show the student's points in a popover."
+msgstr "Näytä opiskelijan pisteet popover-ikkunassa."
 
 #: feedback/templates/manage/_upload_status.html
 #, python-format
