@@ -230,7 +230,6 @@ msgid "Response notify"
 msgstr "Ilmoitus vastauksesta"
 
 #: feedback/models.py
-#| msgid "Response time"
 msgid "Response seen"
 msgstr "Vastaus nähty"
 
@@ -342,7 +341,6 @@ msgid "Import"
 msgstr "Tuo"
 
 #: feedback/templates/feedback_tags/import_tags.html
-#| msgid "Can be imported"
 msgid "Tags to be imported"
 msgstr "Tuotavat tägit"
 
@@ -374,7 +372,6 @@ msgid "no (tag with this slug already exists)"
 msgstr "ei (tunnisteella on jo tägi)"
 
 #: feedback/templates/feedback_tags/import_tags.html
-#| msgid "No feedback tags found for course %(courseName)s."
 msgid "No feedback tags found for this course."
 msgstr "Kurssille ei löytynyt palautetägejä."
 
@@ -475,6 +472,19 @@ msgstr "Avaa opiskelijasivu A+:ssa"
 #: feedback/templates/manage/_submitter_heading.html
 msgid "Show all feedback for this student"
 msgstr "Näytä kaikki palautteet tältä opiskelijalta"
+
+#: feedback/templates/manage/_submitter_heading.html
+#, python-format
+msgid "Conversations with %(name)s"
+msgstr "Keskustelut käyttäjän %(name)s kanssa"
+
+#: feedback/templates/manage/_submitter_heading.html
+msgid "Unable to preview conversations."
+msgstr "Keskustelujen esikatselu ei onnistu."
+
+#: feedback/templates/manage/_submitter_heading.html
+msgid "Show conversations with student in a popover."
+msgstr "Näytä keskustelut opiskelijan kanssa popover-ikkunassa."
 
 #: feedback/templates/manage/_submitter_heading.html
 msgid "Show the student's response to the background questionnaire"
